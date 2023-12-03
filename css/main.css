@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root {
+  --mainBlue: #40ACF1;
+  --transparentBlue: rgba(64, 172, 241, 0.7);
+  --mainWhite: #FFFFFF;
+  --mainBlack: #292F36;
+  --mainGrey: rgb(216, 214, 214);
+  --mainYellow: #e3b505;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+}
+
+.navbar {
+  background-color: #FFFFFF;
+}
+
+.navbar-icon {
+  font-size: 3rem;
+  color: var(--mainBlue);
+}
+
+.navbar-toggler {
+  outline-color: var(--mainBlue) !important;
+}
+
+.nav-link {
+  color: var(--mainBlack);
+  transition: all .3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: var(--mainBlue);
+}
+
+.nav-icon {
+  font-size: 2rem;
+  color: var(--mainBlue);
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.nav-icon:hover {
+  color: var(--mainBlack);
+  text-decoration: none;
+}
+
+.header {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+  color: var(--mainWhite);
+  overflow: hidden;
+
+}
+
+.height-max {
+  min-height: calc(100vh - 80px);
+  background: url('../assets/img/headerBcg.jpeg') no-repeat center/cover fixed;
+  animation-name: zooming;
+  animation-duration: 20s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zooming {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) translateX(-7%);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.title-heading {
+  background: rgb(0, 0, 0, .5, blue, green);
+  border-left: .3rem solid var(--mainBlue);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.section-title-special {
+  background-color: var(--mainBlue);
+  color: var(--mainWhite);
+  padding: .75rem 2rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+@media (max-width: 500px){
+  .title-special {
+    font-size: 25px;
+  }
+
+  .section-title-special{
+    font-size: 23px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  .contact-input {
+    font-size: 18px !important;
+  }
+
+  .contact-btn {
+    font-size: 14px !important;
+  }
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: var(--mainYellow);
+  background-color: var(--mainGrey);
+  padding: .6rem;
+}
+
+.skill-icon:hover {
+  color: var(--mainYellow);
+}
+
+.skills-underline {
+  width: 5rem;
+  height: .3rem;
+  background-color: var(--mainBlue);
+  margin: 1rem auto;
+}
+
+
+.inventory {
+  background-color: var(--mainGrey);
+}
+
+.car {
+  border-radius: 0 !important;
+}
+
+.card-img {
+  border-top-left-radius: 0;
+}
+
+.car-value {
+  background-color: var(--mainBlue);
+  color: var(--mainWhite);
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.car-value:hover {
+  clip-path: polygon(0% 0% , 100% 0 ,100% 100% ,0 100%);
+}
+
+.question {
+  background: url('../assets/img/questionBcg.jpeg') no-repeat center/cover fixed;
+}
+
+.question-gray {
+  background: rgba(79, 109, 122, .75);
+}
+
+.question-yellow {
+  background: rgba(277, 181, 5, .75);
+}
+
+.question-icon {
+  font-size: 4rem;
+  color: var(--mainBlue);
+  transition: all .5s ease-in-out;
+}
+
+.question-icon:hover {
+  transform: translateY(-10%);
+}
+
+.question-info {
+  color: var(--mainWhite);
+}
+
+.featured {
+  background-color: var(--mainGrey);
+}
+
+.feature-item {
+  background-color: var(--mainWhite);
+  border-radius: .3rem !important;
+  opacity: .7;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.feature-item:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.featured-icon {
+  font-size: 1.5rem;
+  color: var(--mainBlue);
+  cursor: pointer;
+  transition: all .5 ease-in-out;
+}
+
+.featured-icon:hover {
+  color: var(--mainBlue);
+}
+
+.img-container {
+  background-color: var(--mainBlue);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.featured-photo {
+  transition: all 1s ease-in-out;
+}
+
+.img-container:hover .featured-photo{
+  transform: scale(1.3);
+  opacity: .5;
+}
+
+.featured-link {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translateY(-50%, -50%);
+  opacity: 0;
+  color: var(--mainBlack);
+  transition: all 1s ease-in-out;
+}
+
+.featured-link:hover {
+  color: var(--mainWhite);
+}
+
+.img-container:hover .featured-link {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+.contact {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../assets/img/headerBcg.jpeg')center/cover fixed no-repeat;
+}
+
+.contact-input {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: var(--mainYellow);
+  color: var(--mainYellow) !important;
+}
+
+.contact-input::placeholder {
+  color: var(--mainYellow);
+}
+
+.contact-input:focus {
+  background: transparent;
+  border-color: var(--mainYellow);
+}
+
+.contact-btn {
+  text-transform: uppercase;
+  color: var(--mainYellow);
+  border-color: var(--mainYellow);
+}
+
+.contact-btn:hover {
+  background-color: var(--mainYellow);
+  border-color: var(--mainBlack);
+  color: var(--mainBlack);
+}
+
+.services {
+  position: relative;
+  min-height: 85vh;
+  min-width: none;
+  margin: 0 auto;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+.video-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--transparentBlue);
+}
+
+.service {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  transition: all 1s ease-in-out;
+}
+
+.service:hover {
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  padding-left: 2.2rem;
+}
+
+.service-icon {
+  font-size: 4rem;
+  color: var(--mainYellow);
+}
+
+.customer-card-body {
+  margin-top: -3.5rem !important;
+  color: var(--mainGrey);
+}
+
+.customer-img {
+  border: .4rem solid var(--mainWhite);
+}
+
+.customer-name {
+  color: var(--mainBlue);
+}
+
+.customer-icon {
+  font-size: 2rem;
+  color: var(--mainGrey);
+}
+
+.customer-text {
+  max-width: 100%;
+}
+
+.footer {
+  background-color: var(--mainBlack);
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--mainYellow);
+  transition: all .5s ease-in-out;
+}
+
+.footer-icon:hover{
+  color: var(--mainBlue);
+}
